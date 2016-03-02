@@ -1,9 +1,93 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Memory Game</title>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
 <body>
+
+	<div id="game-wrapper">
+		<div id="game-field">
+				<h1>The Memory Game</h1>
+
+				<div id="play-bar">
+					<div class="status">Level: 1</div>
+					<div class="status">Moves: 0</div>
+					<div class="start-over">Start Over</div>				
+				</div>
+
+				<div class="grid one">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+
+					<img src="img/monsters-02.png">
+				
+				</div>
+				<div class="grid two">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-06.png">
+					
+				</div>
+				<div class="grid three">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-02.png">
+					
+				</div>
+				<div class="grid four">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-06.png">
+					
+				</div>
+				<div class="grid five">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-02.png">
+			
+				</div>
+				<div class="grid six">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-06.png">
+					
+				</div>
+				<div class="grid seven">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-02.png">
+					
+				</div>
+				<div class="grid eight">
+					<div class="cover" onclick='(this.style.display="none");'>
+					<img src="img/logo.png">
+					</div>
+					
+					<img src="img/monsters-06.png">
+					
+				</div>
+
+		</div>
+
+		<div id="blue-space"></div>
+	</div>
 
 </body>
 </html>
