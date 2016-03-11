@@ -71,4 +71,6 @@ button{
  	border: 2px solid blue;
  }
 
-
+.character{
+	float: right;
+}
