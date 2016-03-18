@@ -1,93 +1,132 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Memory Game</title>
+	<title>The Memory Game</title>
 
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 <body>
-
-	<div id="game-wrapper">
-		<div id="game-field">
-				<h1>The Memory Game</h1>
-
-				<div id="play-bar">
-					<div class="status">Level: 1</div>
-					<div class="status">Moves: 0</div>
-					<div class="start-over">Start Over</div>				
-				</div>
-
-				<div class="grid one">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-
-					<img src="img/monsters-02.png">
-				
-				</div>
-				<div class="grid two">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-06.png">
-					
-				</div>
-				<div class="grid three">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-02.png">
-					
-				</div>
-				<div class="grid four">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-06.png">
-					
-				</div>
-				<div class="grid five">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-02.png">
-			
-				</div>
-				<div class="grid six">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-06.png">
-					
-				</div>
-				<div class="grid seven">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-02.png">
-					
-				</div>
-				<div class="grid eight">
-					<div class="cover" onclick='(this.style.display="none");'>
-					<img src="img/logo.png">
-					</div>
-					
-					<img src="img/monsters-06.png">
-					
-				</div>
+	
+	<div id="header">
+		<div id="left-header">
+			<div class="header-text">Level: 1</div>
+			<div class="header-text">Moves: 0</div>
+		</div>
+		<div id="right-header">
+			<button onclick="restart();">Start Over</button>
 
 		</div>
 
-		<div id="blue-space"></div>
+
 	</div>
+
+	<div id="game-wrapper">
+		
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-01.png">
+				</div>
+			</div>
+		</div>	
+
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-02.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-03.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-04.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-05.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-06.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-07.png">
+				</div>
+			</div>
+		</div>
+	
+		<div class="tile">
+			<div class="inside-tile" onclick="flip(this);">
+				<div class="back"></div>
+				<div class="front">
+					<img src="img/monsters-08.png">
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script type="text/javascript">
+
+		function flip(element){
+			if((element.children[0].style.display === "block") || (element.children[0].style.display === "")){
+			element.children[0].style.display = "none";
+			element.children[1].style.display = "block";
+		}else{
+			element.children[0].style.display = "block";
+			element.children[1].style.display = "none";
+		}
+	}
+
+		function restart(){
+			var back = document.getElementsByClassName('back');
+			for(i=0; i<back.length; i++){
+				back[i].style.display = 'block'
+			}
+			
+			var front = document.getElementsByClassName('front');
+			for(i=0; i<front.length; i++){
+				front[i].style.display = 'none'
+			}
+		}
+	
+
+	</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+</body>
 
 </body>
 </html>
